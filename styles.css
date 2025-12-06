@@ -142,46 +142,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* Scroll Indicator */
-.scroll-indicator {
-    position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.mouse {
-    width: 30px;
-    height: 50px;
-    border: 2px solid var(--primary-color);
-    border-radius: 20px;
-    position: relative;
-    animation: scroll 2s infinite;
-}
-
-.mouse::before {
-    content: '';
-    width: 4px;
-    height: 8px;
-    background: var(--primary-color);
-    position: absolute;
-    top: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 2px;
-    animation: scroll-wheel 2s infinite;
-}
-
-@keyframes scroll {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 1; }
-}
-
-@keyframes scroll-wheel {
-    0% { top: 8px; opacity: 1; }
-    100% { top: 20px; opacity: 0; }
-}
-
 /* Floating Background Animation */
 .hero-bg-animation {
     position: absolute;
