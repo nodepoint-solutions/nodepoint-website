@@ -550,33 +550,14 @@ section {
     
     .nav-menu {
         gap: 1rem;
-    }git 
-    
-    .hero {
-        padding-top: 120px;
-    }
-    
-    .hero-content {
-        padding: 0.5rem;
     }
     
     .hero h1 {
         font-size: 2.5rem;
-        margin-bottom: 0.75rem;
     }
     
     .hero p {
         font-size: 1.1rem;
-        margin-bottom: 1rem;
-    }
-    
-    .hero-specialisms {
-        margin-top: 1rem;
-    }
-    
-    .specialism-tag {
-        padding: 0.5rem 1rem;
-        font-size: 0.85rem;
     }
     
     .projects-grid,
