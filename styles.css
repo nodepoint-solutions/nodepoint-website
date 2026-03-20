@@ -622,14 +622,21 @@ body {
 @media (max-width: 768px) {
     :root {
         --px:    1.25rem;
-        --nav-h: 64px;
+        --nav-h: 88px;
     }
 
-    .nav-menu { gap: 1.5rem; }
+    .nav-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.4rem;
+        height: var(--nav-h);
+    }
+
+    .nav-menu { gap: 1.25rem; }
 
     .nav-menu a {
-        font-size: 0.75rem;
-        letter-spacing: 0.05em;
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
     }
 
     .hero {
