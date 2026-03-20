@@ -136,11 +136,13 @@ body {
     transition: width 0.25s ease;
 }
 
-.nav-menu a:hover {
+.nav-menu a:hover,
+.nav-menu a.active {
     color: var(--hero-text);
 }
 
-.nav-menu a:hover::after {
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
     width: 100%;
 }
 
@@ -594,14 +596,7 @@ body {
 }
 
 .scroll-reveal {
-    opacity: 0;
-    transform: translateY(28px);
     transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.scroll-reveal.active {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 /* ─────────────────────────────────────────────

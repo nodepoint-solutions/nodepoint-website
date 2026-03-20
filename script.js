@@ -4,12 +4,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('active');
+                entry.target.style.opacity = '';
+                entry.target.style.transform = '';
             }
         });
     }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
 
-    document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(28px)';
+        observer.observe(el);
+    });
 
     // Stagger client rows
     document.querySelectorAll('.client-item').forEach((el, i) => {
@@ -48,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (scrollY >= top && scrollY < top + section.offsetHeight) {
                 navLinks.forEach(link => {
                     const isActive = link.getAttribute('href') === `#${section.getAttribute('id')}`;
-                    link.style.color = isActive ? 'var(--ink)' : '';
+                    link.classList.toggle('active', isActive);
                 });
             }
         });
