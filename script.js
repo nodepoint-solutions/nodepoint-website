@@ -48,17 +48,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateActiveNav() {
         const scrollY = window.pageYOffset;
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        let activeId = null;
+
         sections.forEach(section => {
-            const top = section.offsetTop - navH - 40;
-            if (scrollY >= top && scrollY < top + section.offsetHeight) {
-                navLinks.forEach(link => {
-                    const isActive = link.getAttribute('href') === `#${section.getAttribute('id')}`;
-                    link.classList.toggle('active', isActive);
-                });
+            if (scrollY >= section.offsetTop - navH - 40) {
+                activeId = section.getAttribute('id');
             }
+        });
+
+        // When the page can't scroll far enough to cross the last section's threshold
+        // (e.g. contact is near the bottom), activate it once we're at the page bottom
+        if (maxScroll > 0 && maxScroll - scrollY < 5) {
+            activeId = sections[sections.length - 1].getAttribute('id');
+        }
+
+        navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${activeId}`);
         });
     }
 
+    updateActiveNav();
     window.addEventListener('scroll', updateActiveNav, { passive: true });
+    // scrollend fires once animation fully settles — reliable final-state catch
+    window.addEventListener('scrollend', updateActiveNav, { passive: true });
 
 });
