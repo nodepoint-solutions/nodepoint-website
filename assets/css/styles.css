@@ -620,6 +620,8 @@ body {
         justify-content: flex-start;
     }
 
+    .hero-scroll-hint { display: none; }
+
     .hero-footer {
         flex-direction: column;
         gap: 1.5rem;
