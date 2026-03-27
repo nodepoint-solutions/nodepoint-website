@@ -233,28 +233,6 @@ body {
     font-weight: 400;
 }
 
-.hero-specialisms {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    padding-top: 0.1rem;
-}
-
-.specialism-tag {
-    font-family: var(--f-mono);
-    font-size: 0.72rem;
-    color: var(--hero-text);
-    border: 1px solid var(--hero-border);
-    padding: 0.45rem 0.9rem;
-    letter-spacing: 0.04em;
-    transition: border-color 0.25s, background 0.25s;
-}
-
-.specialism-tag:hover {
-    border-color: rgba(139,87,216,0.6);
-    background: rgba(139,87,216,0.08);
-}
-
 .hero-scroll-hint {
     position: absolute;
     bottom: 2.5rem;
