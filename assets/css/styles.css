@@ -588,6 +588,7 @@ body {
         align-items: center;
         gap: 1.5rem;
         justify-content: flex-start;
+        order: -1;
     }
 
     .director-info { text-align: left; }
