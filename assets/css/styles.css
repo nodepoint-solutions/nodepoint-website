@@ -291,14 +291,6 @@ body {
     padding: 1.75rem 0;
     border-top: 1px solid var(--border);
     cursor: default;
-    transition: background 0.2s;
-}
-
-.client-item:hover {
-    background: var(--paper-3);
-    margin: 0 -1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
 }
 
 .client-name {
@@ -647,11 +639,6 @@ body {
         padding: 1.25rem 0;
     }
 
-    .client-item:hover {
-        margin: 0;
-        padding-left: 0;
-        padding-right: 0;
-    }
 
     .client-name  { max-width: 100%; }
     .client-divider { display: none; }
