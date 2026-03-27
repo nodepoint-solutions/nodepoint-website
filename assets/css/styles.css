@@ -622,7 +622,8 @@ body {
     }
 
     .hero {
-        padding-top: calc(var(--nav-h) + 3rem);
+        padding-top: calc(var(--nav-h) + 2rem);
+        padding-bottom: 3rem;
         min-height: 100svh;
     }
 
