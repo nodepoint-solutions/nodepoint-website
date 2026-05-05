@@ -487,6 +487,24 @@ body {
     transform: translateY(-1px);
 }
 
+.contact-ctas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.contact-linkedin-link {
+    font-size: 0.875rem;
+    color: var(--ink-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact-linkedin-link:hover {
+    color: var(--ink);
+}
+
 .contact-portrait {
     display: flex;
     flex-direction: column;
@@ -550,6 +568,16 @@ body {
     font-size: 0.72rem;
     color: var(--hero-muted);
     letter-spacing: 0.05em;
+}
+
+.footer-email {
+    color: var(--hero-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-email:hover {
+    color: #fff;
 }
 
 /* ─────────────────────────────────────────────
