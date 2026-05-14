@@ -440,13 +440,6 @@ body {
     border-top: 1px solid var(--border);
 }
 
-.contact-layout {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 6rem;
-    align-items: start;
-}
-
 .contact-heading {
     margin-bottom: 2rem;
 }
@@ -505,30 +498,74 @@ body {
     color: var(--ink);
 }
 
-.contact-portrait {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.25rem;
-    flex-shrink: 0;
+.contact-secondary-cta {
+    font-family: var(--f-sans);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1px;
+    transition: border-color 0.2s, color 0.2s;
 }
 
-.director-photo {
-    width: 180px;
-    height: 180px;
+.contact-secondary-cta:hover {
+    border-color: var(--ink);
+}
+
+/* ─────────────────────────────────────────────
+   Team
+───────────────────────────────────────────── */
+.team-section {
+    padding: 8rem 0;
+    background: var(--paper);
+    border-top: 1px solid var(--border);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 280px);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.team-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.team-photo {
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
     object-position: center top;
     display: block;
-    box-shadow: 0 0 0 4px var(--paper-2), 0 0 0 6px var(--border);
+    box-shadow: 0 0 0 4px var(--paper), 0 0 0 6px var(--border);
 }
 
-.director-info {
-    text-align: center;
+.team-photo--placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--paper-2);
+    border: 1px solid var(--border);
+    font-family: var(--f-sans);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--ink-muted);
+    letter-spacing: 0.05em;
+    box-shadow: 0 0 0 4px var(--paper), 0 0 0 6px var(--border);
 }
 
-.director-name {
-    display: block;
+.team-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.team-name {
     font-family: var(--f-sans);
     font-weight: 700;
     font-size: 1.1rem;
@@ -536,15 +573,35 @@ body {
     letter-spacing: -0.02em;
 }
 
-.director-title {
-    display: block;
+.team-title {
     font-family: var(--f-mono);
     font-size: 0.7rem;
     color: var(--ink-muted);
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    margin-top: 0.3rem;
 }
+
+
+.team-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.team-contact svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+.team-contact:hover {
+    color: var(--ink);
+}
+
 
 /* ─────────────────────────────────────────────
    Footer
@@ -606,20 +663,9 @@ body {
    Responsive
 ───────────────────────────────────────────── */
 @media (max-width: 900px) {
-    .contact-layout {
-        grid-template-columns: 1fr;
-        gap: 3rem;
+    .team-grid {
+        grid-template-columns: 1fr 1fr;
     }
-
-    .contact-portrait {
-        flex-direction: row;
-        align-items: center;
-        gap: 1.5rem;
-        justify-content: flex-start;
-        order: -1;
-    }
-
-    .director-info { text-align: left; }
 }
 
 @media (max-width: 768px) {
@@ -697,4 +743,5 @@ body {
 @media (max-width: 480px) {
     .skills-grid { grid-template-columns: 1fr; }
     .nav-menu { gap: 1.25rem; }
+    .team-grid { grid-template-columns: 1fr; }
 }
