@@ -339,6 +339,43 @@ body {
     border-bottom: 1px solid var(--border);
 }
 
+/* Services offerings */
+.offerings-block {
+    margin-bottom: 6rem;
+}
+
+.offerings-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 0;
+    border-top: 1px solid var(--border);
+}
+
+.offering-item {
+    padding: 2rem 2rem 2rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.offering-item:nth-child(odd) {
+    padding-right: 3rem;
+}
+
+.offering-content h4 {
+    font-family: var(--f-sans);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+}
+
+.offering-content p {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--ink-muted);
+    line-height: 1.65;
+}
+
 /* Projects */
 .projects-block {
     margin-bottom: 6rem;
@@ -726,6 +763,14 @@ body {
         grid-template-columns: 52px 1fr;
         gap: 1rem;
         padding: 2rem 0;
+    }
+
+    .offerings-list {
+        grid-template-columns: 1fr;
+    }
+
+    .offering-item:nth-child(odd) {
+        padding-right: 0;
     }
 
     .skills-grid {
